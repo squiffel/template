@@ -1,10 +1,17 @@
 <script>
+	import ButtonBasic from './components/ButtonBasic.svelte'
 	export let name;
+	let title = "Chicken"
+	let show_text = true
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	{#if show_text}
+	<p>Sup!</p>
+	{/if}
+	<ButtonBasic {title} />
 </main>
 
 <style>
